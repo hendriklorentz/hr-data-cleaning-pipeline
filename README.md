@@ -29,7 +29,7 @@ An automated Python pipeline was engineered to cleanly isolate, restructure, and
 glitch_filter = (df['EmployeeStatus'] == 'Active') & (df['ExitDate'].notnull())
 df.loc[glitch_filter, 'EmployeeStatus'] = 'Terminated'
 ```
-🗄️ 3. Relational Database Architecture (SQL Blueprint)
+## 🗄️ 3. Relational Database Architecture (SQL Blueprint)
 To transition the clean flat file data into permanent data warehouse storage, a relational database schema was drafted with explicit structural integrity constraints:
 CREATE TABLE production_workforce_dim (
     emp_id INT PRIMARY KEY,
@@ -41,7 +41,7 @@ CREATE TABLE production_workforce_dim (
     current_employee_rating INT NULL
 );
 
-📈 4. Business Outcome
+## 📈 4. Business Outcome
 100% Data Integrity Restored: Successfully isolated 1,467 truly active corporate employees from historical records, correcting a headcount error margin of over 30%.
 
 Audit-Ready Infrastructure: Mitigated automated system waste by giving human resource, financial audit, and L&D operations managers a single, trusted baseline of active personnel data.
